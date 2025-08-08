@@ -5,9 +5,9 @@ int bruteForce(string s1, string s2, int n1, int n2){
     int second, first;
 
     for(int i = 0; i <= n1-n2; i++){
-        first = i,second = 0;
+        first = i, second = 0;
         while(second < n2){
-            if(s1[first] == s2[second]){
+            if(s1[first] != s2[second]){
                 break;
             }
             else{
