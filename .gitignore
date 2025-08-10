@@ -1,5 +1,6 @@
 # Ignore all .exe files
 *.exe
+.vscode/
 
 # Optional: Ignore OS/system files
 .DS_Store
