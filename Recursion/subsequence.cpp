@@ -11,6 +11,7 @@ void subsequence(vector<int> &arr, int index, int size, vector<vector<int> > &an
     // include
     temp.push_back(arr[index]);
     subsequence(arr, index+1, size, ans, temp);
+    temp.pop_back(); // vector space optimization
 }
 int main(){
     vector<int> arr = {1,2,3};
