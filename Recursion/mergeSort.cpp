@@ -27,6 +27,7 @@ void merge(vector<int> &arr, int start, int mid, int end){
         arr[i] = temp[i-start];
     }
 }
+
 void mergeSort(vector<int> &arr, int start, int end){
     if(start >= end){
         return;
@@ -36,6 +37,8 @@ void mergeSort(vector<int> &arr, int start, int end){
     mergeSort(arr, mid + 1, end);
     merge(arr, start, mid, end);
 }
+
+
 int main(){
     vector<int> arr = {1,3,6,79,54,2,3,4,6,8,9,25,7,4};
     cout<<"Before  sort arr : ";
