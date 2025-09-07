@@ -15,6 +15,29 @@ class Node{
     }
 };
 
+void preorder(Node* &root){
+    if(root==NULL){
+        return;
+    }
+    cout<<root->val<<" ";
+    preorder(root->left);
+    preorder(root->right);
+}
+
+void inorder(Node* &root){
+    if(root == NULL) return;
+    
+    inorder(root->left);
+    cout<<root->val<<" ";
+    inorder(root->right);
+}
+void postorder(Node* root){
+    if(root==NULL) return;
+    postorder(root->left);
+    postorder(root->right);
+    cout<<root->val<<" ";
+}
+
 int main(){
     queue<Node*> qu;
     int x;
@@ -43,5 +66,15 @@ int main(){
         qu.pop();
 
     }
+
+    cout<<endl;
+    cout<<"pre-order : ";
+    preorder(root);
+    cout<<endl;
+    cout<<"in-order : ";
+    inorder(root);
+    cout<<endl;
+    cout<<"post-order : ";
+    postorder(root);
     return 0;
 }
