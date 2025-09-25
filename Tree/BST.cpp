@@ -25,6 +25,20 @@ Node* insert(Node* root, int target){
     return root;
 }
 
+bool search(Node* root, int target){
+    if(!root){
+        return 0;
+    }
+    if(root->val == target){
+        return 1;
+    }
+    if(root->val < target){
+        return search(root->right,  target);
+    }else{
+        return search(root->left, target);
+    }
+}
+
 void inorder(Node* root){
     if(!root){
         return;
@@ -45,6 +59,7 @@ int main(){
     }
 
     inorder(root);
+    cout<<search(root, 8);
 
 
 }
