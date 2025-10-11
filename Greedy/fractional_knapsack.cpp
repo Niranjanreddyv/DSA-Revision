@@ -21,6 +21,9 @@ bool cmp(pair<int, int> p1, pair<int, int> p2){
 
 double fractinalknapsack(vector<int> &value, vector<int> &weight, int n, double w){
 
+    // Time : O(nlogn)
+    // space : O(sorting algo)
+
     vector<pair<int, int>> arr;
 
     for(int i = 0;i<value.size();i++){
